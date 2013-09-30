@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/modules/web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/controller/ParentController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/controller/StaffController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/controller/StudentController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/model/Parent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/model/Staff.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/model/Student.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/service/ParentService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/service/StaffService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/service/StudentService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/web/src/main/java/com/guru/mayoo/ui/SideMenuController.java" charset="UTF-8" />
+  </component>
+</project>
+
