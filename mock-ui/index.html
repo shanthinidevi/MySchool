@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="resources/bootstarp/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="resources/custom/css/offcanvas.css" rel="stylesheet" media="screen">
+
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,22 +20,53 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#">My School Name</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+            <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">History And Traditions</a></li>
+                    <li><a href="#">Identity</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Annual Events</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Academic Staff</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Special Prizes</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Academic Staff</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Special Prizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Alumni <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">College Union</a></li>
+                    <li><a href="#">Memories</a></li>
                 </ul>
             </li>
         </ul>
@@ -43,20 +77,77 @@
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Sign Up</a></li>
+
         </ul>
     </div><!-- /.navbar-collapse -->
     </div>
 </nav>
+
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="well sidebar-nav">
+                <ul class="nav">
+                    <li>Overview</li>
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li>History And Traditions</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li>Sidebar</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div><!--/.well -->
+        </div><!--/span-->
+
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div class="jumbotron">
+                <h1>Hello, world!</h1>
+                <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,mod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+                </div><!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus.us. Etiam porec sed odio du kjgkj kjgkgi. </p>
+                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+                </div><!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. s. Etiaeuismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+                </div><!--/span-->
+
+            </div><!--/row-->
+        </div><!--/span-->
+
+
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>&copy; My School 2013</p>
+    </footer>
+
+</div><!--/.container-->
+
+
 
 
 
