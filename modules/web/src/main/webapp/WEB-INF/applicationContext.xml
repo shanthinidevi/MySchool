@@ -13,7 +13,7 @@
     <!-- Activates various annotations to be detected in bean classes -->
     <context:annotation-config />
 
-    <context:component-scan base-package="com.guru.mayoo.controller"/>
+    <context:component-scan base-package="com.guru.mayoo"/>
 
     <!--serve for the static contents-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
@@ -21,16 +21,14 @@
     <!--we will be using annotation driven handler mapping-->
     <mvc:annotation-driven/>
 
-    <!-- Factory bean that creates the Mongo instance -->
-    <!--<bean id="mongoDbFactoryBean" class="org.springframework.data.mongodb.core.MongoFactoryBean">
-        <property name="host" value="localhost" />
+    <bean id="placeholderConfig"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:connection.properties</value>
+            </list>
+        </property>
     </bean>
-
-    &lt;!&ndash; MongoTemplate for connecting and quering the documents in the database &ndash;&gt;
-    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg name="mongo" ref="mongoDbFactoryBean" />
-        <constructor-arg name="databaseName" value="myschooldb" />
-    </bean>-->
 
     <!--localization and internationalization starts here -->
 
