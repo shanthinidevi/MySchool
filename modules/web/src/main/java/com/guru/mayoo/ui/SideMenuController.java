@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SideMenuController {
 
-    @RequestMapping(value = {"/","welcome"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/","welcome2"},method = RequestMethod.GET)
     public ModelAndView displayWelcomePage(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("welcome-page");

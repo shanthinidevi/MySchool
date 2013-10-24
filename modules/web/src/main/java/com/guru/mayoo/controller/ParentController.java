@@ -26,7 +26,7 @@ public class ParentController {
         } else {
             parentService.addParent(parent);
         }
-        return new RedirectView("/students/welcome");
+        return new RedirectView("/students/welcome1");
     }
 
 
