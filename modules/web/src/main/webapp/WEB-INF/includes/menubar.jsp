@@ -84,8 +84,8 @@
                     <li class="dropdown">
                         <a href="about.html" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.join.us"/><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><i class="icon-signin"></i> <fmt:message key="label.school.sign.in"/></a></li>
-                            <li><a href="#myModal" data-toggle="modal"><i class="icon-signout"></i> <fmt:message key="label.school.sign.up"/></a></li>
+                            <li><a href="#signInModal" data-toggle="modal"><i class="icon-signin"></i> <fmt:message key="label.school.sign.in"/></a></li>
+                            <li><a href="#"><i class="icon-signout"></i> <fmt:message key="label.school.sign.up"/></a></li>
                             <li><a href="#"><i class="icon-envelope"></i> <fmt:message key="label.school.contact.us"/></a></li>
                         </ul>
                     </li>
@@ -95,12 +95,9 @@
         </div><!-- /.container -->
     </nav>
 
-        <%@ include file="signin.jsp"%>
-
-
 
         <!--Sign up Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -110,15 +107,15 @@
                     <div class="modal-body">
                         <form class="form-horizontal" role="form">
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+                                <label for="signInEmail" class="col-lg-2 control-label">Email</label>
                                 <div class="col-lg-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                    <input type="email" class="form-control" id="signInEmail" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
+                                <label for="signInPassword" class="col-lg-2 control-label">Password</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                    <input type="password" class="form-control" id="signInPassword" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -137,19 +134,11 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
-
     </fmt:bundle>
     </body>
-
-
 </html>
 
 
