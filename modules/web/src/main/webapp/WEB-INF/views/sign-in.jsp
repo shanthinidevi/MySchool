@@ -5,12 +5,15 @@
 </head>
 <body>
 <fmt:bundle basename="messages">
-    <c:if test="${not empty param.error}">
-        <font color="red">
-            Login error. <br />
-            Reason : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
-        </font>
+
+    <h2>Sign In</h2>
+    <c:if test="${not empty error}">
+        <div style="color:red">
+            Your fake login attempt was bursted, dare again !!<br />
+            Caused : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+        </div>
     </c:if>
+
     <form class="form-horizontal" method="POST" action="<c:url value="/j_spring_security_check" />" role="form">
         <div class="form-group">
             <label for="signInEmail" class="col-lg-2 control-label">Email</label>

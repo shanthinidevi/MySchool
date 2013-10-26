@@ -52,7 +52,7 @@
         </div>
     <%@ include file="/WEB-INF/includes/footer.jsp"%>
 
-    <script src="<c:url value="/resources/jquery/jquery-1.10.2.js"/> "> </script>
+   <%-- <script src="<c:url value="/resources/jquery/jquery-1.10.2.js"/> "> </script>
     <script src="<c:url value="/resources/bootstarp/dist/js/bootstrap.js"/> "> </script>
     <script src="<c:url value="/resources/date-picker/bootstrap-datepicker.js"/> "> </script>
     <script src="<c:url value="/resources/select-bootstrap/bootstrap-select.js"/> "> </script>
@@ -61,8 +61,15 @@
     <script src="<c:url value="/resources/bootstarp/js/bootstrap-popover.js"/> "> </script>
     <script src="<c:url value="/resources/bootstarp/js/bootstrap-tooltip.js"/> "> </script>
     <script src="<c:url value="/resources/bootstarp/js/bootstrap-tab.js"/> "> </script>
-    <script src="<c:url value="/resources/jquery/jquery.cycle.all.js"/>" type="text/javascript"></script>
-    <script src="<c:url value="/resources/js/custom.js"/>" type="text/javascript"></script>
+    <script src="<c:url value="/resources/jquery/jquery.cycle.all.js"/>"></script>
+    <script src="<c:url value="/resources/js/custom.js"/>"></script>--%>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<c:url value="/resources/theme/js/jquery.js"/>"></script>
+    <script src="<c:url value="/resources/theme/js/bootstrap.js"/>"></script>
+    <script src="<c:url value="/resources/theme/js/modern-business.js"/>"></script>
+
 
 </body>
 </html>

@@ -32,16 +32,6 @@
         </bean>
     </mvc:interceptors>
 
-
-    <bean id="placeholderConfig"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:connection.properties</value>
-            </list>
-        </property>
-    </bean>
-
     <!--localization and internationalization starts here -->
 
     <bean id="messageSource"

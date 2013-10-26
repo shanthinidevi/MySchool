@@ -34,7 +34,7 @@
                 <a href=""><fmt:message key="side.menu.assign.class.room"/></a>
             </li>
 
-            <li class="side-menu-header"><fmt:message key="side.menu.configure"/></li>
+          <%--  <li class="side-menu-header"><fmt:message key="side.menu.configure"/></li>
             <li>
                 <a href=""><fmt:message key="side.menu.subjects"/></a>
             </li>
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <a href=""><fmt:message key="side.menu.uniforms"/></a>
-            </li>
+            </li>--%>
         </ul>
     </div>
 </div>
