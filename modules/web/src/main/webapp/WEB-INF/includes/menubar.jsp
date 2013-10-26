@@ -1,9 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 <html>
     <head>
     </head>
     <body>
+
     <fmt:bundle basename="messages">
 
     <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
@@ -22,18 +25,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav pull-right">
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.about.school"/><b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><fmt:message key="label.school.history"/></a></li>
-                            <li><a href="#"><fmt:message key="label.school.anthem"/></a></li>
-                            <li><a href="#"><fmt:message key="label.school.vision"/></a></li>
-                            <li><a href="#"><fmt:message key="label.school.mission"/></a></li>
-                            <li><a href="#"><fmt:message key="label.school.logo"/></a></li>
-                        </ul>
-                    </li>
-
+                    <sec:authorize ifAnyGranted="ROLE_ADMIN">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.about.school"/><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><fmt:message key="label.school.history"/></a></li>
+                                <li><a href="#"><fmt:message key="label.school.anthem"/></a></li>
+                                <li><a href="#"><fmt:message key="label.school.vision"/></a></li>
+                                <li><a href="#"><fmt:message key="label.school.mission"/></a></li>
+                                <li><a href="#"><fmt:message key="label.school.logo"/></a></li>
+                            </ul>
+                        </li>
+                    </sec:authorize>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.history"/><b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
@@ -49,43 +52,40 @@
                             </li>
                         </ul>
                     </li>
-
-                    <li><a href="services.html"><fmt:message key="label.school.link"/></a></li>
-                    <li><a href="contact.php"><fmt:message key="label.school.link"/></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.link"/><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="portfolio-1-col.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="portfolio-2-col.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="portfolio-3-col.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="portfolio-4-col.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="portfolio-item.html"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.link"/><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog-home-1.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="blog-home-2.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="blog-post.html"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.link"/><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="full-width.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="sidebar.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="faq.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="404.html"><fmt:message key="label.school.link"/></a></li>
-                            <li><a href="pricing.html"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
+                            <li><a href="#"><fmt:message key="label.school.link"/></a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a href="about.html" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.join.us"/><b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="label.school.join.us"/><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><i class="icon-signin"></i> <fmt:message key="label.school.sign.in"/></a></li>
-                            <li><a href="#myModal" data-toggle="modal"><i class="icon-signout"></i> <fmt:message key="label.school.sign.up"/></a></li>
+                            <li><a href="#signInModal" data-toggle="modal"><i class="icon-signin"></i> <fmt:message key="label.school.sign.in"/></a></li>
+                            <li><a href="#"><i class="icon-signout"></i> <fmt:message key="label.school.sign.up"/></a></li>
                             <li><a href="#"><i class="icon-envelope"></i> <fmt:message key="label.school.contact.us"/></a></li>
                         </ul>
                     </li>
@@ -95,30 +95,35 @@
         </div><!-- /.container -->
     </nav>
 
-        <%@ include file="signin.jsp"%>
-
-
 
         <!--Sign up Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Sign Up</h4>
+                        <h4 class="modal-title">Sign In</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-horizontal" role="form">
+
+                        <c:if test="${not empty param.error}">
+                            <font color="red">
+                                Login error. <br />
+                                Reason : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+                            </font>
+                        </c:if>
+
+                        <form class="form-horizontal" method="POST" action="<c:url value="/j_spring_security_check" />" role="form">
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+                                <label for="signInEmail" class="col-lg-2 control-label">Email</label>
                                 <div class="col-lg-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                    <input type="text" class="form-control" id="signInEmail" name="j_username" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
+                                <label for="signInPassword" class="col-lg-2 control-label">Password</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                    <input type="password" class="form-control" id="signInPassword" name="j_password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -137,19 +142,11 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
-
     </fmt:bundle>
     </body>
-
-
 </html>
 
 
