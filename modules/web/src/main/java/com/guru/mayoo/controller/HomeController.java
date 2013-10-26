@@ -14,5 +14,11 @@ public class HomeController {
         return "home";
     }
 
+    @RequestMapping(value = "/login" , method = RequestMethod.GET)
+    public String loginForm(Model model){
+
+        return "login";
+    }
+
 
 }
