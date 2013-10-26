@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/home" , method = RequestMethod.GET)
-    public String setUp(Model model){
+    @RequestMapping(value = "/welcome" , method = RequestMethod.GET)
+    public String homePage(Model model){
 
-        return "home";
+        return "welcome";
     }
 
-    @RequestMapping(value = "/login" , method = RequestMethod.GET)
-    public String loginForm(Model model){
+    @RequestMapping(value = "signIn" , method = RequestMethod.GET)
+    public String signInPage(Model model){
 
-        return "login";
+        return "sign-in";
     }
 
 

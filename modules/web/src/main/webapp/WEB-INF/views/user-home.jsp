@@ -9,7 +9,7 @@
 
 <sec:authorize ifAnyGranted="ROLE_ADMIN">
     <h1>Only admin can see this</h1><br/>
-    <a href="admin"> Admin Home </a>
+    <a href="adminHome"> Admin Home </a>
 </sec:authorize>
 
 <h1>Welcome</h1>
