@@ -1,8 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 	<body>
-	
-		<h1 id="banner">Unauthorized Access !!</h1>
+    <div class="well col-lg-6 pull-center">
+		<h3 id="banner">Unauthorized Access !!</h3>
 	
 		<hr />
 	
@@ -15,5 +15,6 @@
 	
 		<p class="message">Access denied!</p>
 		<a href="signIn">Go back to login page</a>
+        </div>
 	</body>
 </html>
