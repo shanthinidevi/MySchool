@@ -19,7 +19,7 @@ http://www.springframework.org/schema/security/spring-security-3.0.xsd">
         <intercept-url pattern="/adminHome*" access="ROLE_ADMIN" />-->
 
         <form-login login-page="/signIn" default-target-url="/userHome"
-                    authentication-failure-url="/accessDenied"/>
+                    authentication-failure-url="/signIn"/>
         <logout logout-success-url="/signIn" invalidate-session="true"/>
 
         <anonymous username="guest" granted-authority="ROLE_GUEST"/>

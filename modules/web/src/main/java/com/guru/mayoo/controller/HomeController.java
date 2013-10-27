@@ -17,7 +17,7 @@ public class HomeController {
 
     @RequestMapping(value = "signIn" , method = RequestMethod.GET)
     public String signInPage(Model model){
-
+        model.addAttribute("error", "true");
         return "sign-in";
     }
 
@@ -26,7 +26,7 @@ public class HomeController {
     @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
     public String loginError(ModelMap model) {
         model.addAttribute("error", "true");
-        return "denied";
+        return "access-denied";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

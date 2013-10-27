@@ -5,6 +5,7 @@
 </head>
 <body>
 <fmt:bundle basename="messages">
+
     <c:if test="${not empty error}">
         <div style="color:red">
             Your fake login attempt was bursted, dare again !!<br />

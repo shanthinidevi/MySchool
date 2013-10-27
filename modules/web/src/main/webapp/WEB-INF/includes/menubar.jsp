@@ -19,7 +19,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="welcome"><fmt:message key="label.school.name"/></a>
+                <a class="navbar-brand" href="welcome">
+                    <span class="logo"><img class="" src="<c:url value="/resources/images/school-logo.png"/>" height="50px" width="50px"></span>
+                    <fmt:message key="label.school.name"/>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
