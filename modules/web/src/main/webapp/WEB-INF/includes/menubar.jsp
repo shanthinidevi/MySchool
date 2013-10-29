@@ -20,7 +20,7 @@
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                 <a class="navbar-brand" href="welcome">
-                    <span class="logo"><img class="" src="<c:url value="/resources/images/school-logo.png"/>" height="50px" width="50px"></span>
+                    <span><img class="logo" src="<c:url value="/resources/images/school-logo.png"/>"></span>
                     <fmt:message key="label.school.name"/>
                 </a>
             </div>
