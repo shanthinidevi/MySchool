@@ -1,12 +1,13 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
 <html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-<hr/>
-<div id="carousel-example-generic" class="carousel slide">
+    <fmt:bundle basename="messages">
+    <head>
+        <title><fmt:message key="label.welcome.to.school.name"/></title>
+    </head>
+    <body>
+    <hr/>
+    <div id="carousel-example-generic" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -45,4 +46,5 @@
 <a href="signIn">Sign In</a><br/>
 <h1>Welcome to Home</h1>
 </body>
+</fmt:bundle>
 </html>
