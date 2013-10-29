@@ -8,11 +8,20 @@ http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 
     <beans:import resource="spring-database.xml"/>
-    <http auto-config="true">
-        <intercept-url pattern="/home*" access="ROLE_USER,ROLE_ADMIN" />
-        <intercept-url pattern="/admin*" access="ROLE_ADMIN" />
-        <form-login login-page="/WEB-INF/views/login.jsp" default-target-url="/home" authentication-failure-url="/login"/>
-        <logout logout-success-url="/login" />
+    <http auto-config="true"  use-expressions="true">
+        <intercept-url pattern="/welcome" access="permitAll" />
+        <intercept-url pattern="/signIn" access="permitAll" />
+        <intercept-url pattern="/accessDenied" access="permitAll" />
+        <intercept-url pattern="/userHome*" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/userHome*" access="hasRole('ROLE_ADMIN')" />
+
+        <!--<intercept-url pattern="/userHome*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url pattern="/adminHome*" access="ROLE_ADMIN" />-->
+
+        <form-login login-page="/signIn" default-target-url="/userHome"
+                    authentication-failure-url="/signIn"/>
+        <logout logout-success-url="/signIn" invalidate-session="true"/>
+
         <anonymous username="guest" granted-authority="ROLE_GUEST"/>
         <remember-me/>
 	</http>
