@@ -2,6 +2,7 @@
 myschool.iml
 target/
 modules/modules.iml
+modules/reporting/reporting-module.iml
 modules/web/logs/
 modules/web/web-module.iml
 modules/web/target/

@@ -1,19 +1,30 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <fmt:bundle basename="messages">
-<head>
-</head>
+    <head>
+    </head>
     <body>
-    <footer class="bs-footer" id="footer">
-        <div class="container">
-            <p class="muted">
-                <fmt:message key="copy.right.year"/>
-                <a href="http://www.smayoorans.blogspot.com">
-                    <fmt:message key="copy.right.owner"/>
-                </a>
-                <fmt:message key="copy.right.message"/>
-            </p>
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <fmt:message key="copy.right.year"/>
+                        <a href="http://www.smayoorans.blogspot.com">
+                            <fmt:message key="copy.right.owner"/>
+                        </a>
+                        <fmt:message key="copy.right.message"/>
+                    </div>
+                    <!-- /span12 -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
         </div>
-    </footer>
+        <!-- /footer-inner -->
+    </div>
+    <!-- /footer -->
+
     </body>
 </fmt:bundle>
 </html>

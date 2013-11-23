@@ -1,11 +1,63 @@
 package com.guru.mayoo.model;
 
-/**
- * Created with IntelliJ IDEA.
- * User: mayooran
- * Date: 8/29/13
- * Time: 9:56 PM
- * To change this template use File | Settings | File Templates.
- */
-public class Student {
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "STUDENTS")
+public class Student implements Serializable {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "STUDENT_ID")
+    private int studentId;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+    @Column(name = "LAST_NAME")
+    private String lastName;
+    @Column(name = "DATE_OF_BIRTH")
+    private String dateOfBirth;
+    @Column(name = "GENDER")
+    private String gender;
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
