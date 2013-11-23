@@ -1,0 +1,9 @@
+.idea/
+myschool.iml
+target/
+modules/modules.iml
+modules/web/logs/
+modules/web/web-module.iml
+modules/web/target/
+
+
