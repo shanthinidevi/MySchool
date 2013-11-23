@@ -9,7 +9,6 @@ import java.io.Serializable;
 public class Student implements Serializable {
 
     @Id
-    @GeneratedValue
     @Column(name = "STUDENT_ID")
     private int studentId;
     @Column(name = "FIRST_NAME")
@@ -18,8 +17,11 @@ public class Student implements Serializable {
     private String lastName;
     @Column(name = "DATE_OF_BIRTH")
     private String dateOfBirth;
+    @Column(name = "GRADE")
+    private String grade;
     @Column(name = "GENDER")
     private String gender;
+
 
     public int getStudentId() {
         return studentId;
@@ -51,6 +53,14 @@ public class Student implements Serializable {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
     public String getGender() {

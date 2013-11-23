@@ -9,21 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Repository
-@SuppressWarnings({"unchecked", "rawtypes"})
-public class StudentDao {
+public interface StudentDao {
 
-    @Autowired
-    private SessionFactory sessionFactory;
-
-    /**
-     * @Transactional annotation below will trigger Spring Hibernate transaction manager to automatically create
-     * a hibernate session. See src/main/webapp/WEB-INF/servlet-context.xml
-     */
-    @Transactional
-    public List<Student> findAll() {
-        Session session = sessionFactory.getCurrentSession();
-        List students = session.createQuery("from STUDENTS").list();
-        return students;
-    }
+    public void addStudent(Student student);
+    public List<Student> listStudent();
+    public void removeStudent(Integer id);
 }
+

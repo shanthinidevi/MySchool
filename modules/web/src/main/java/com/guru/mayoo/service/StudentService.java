@@ -1,11 +1,12 @@
 package com.guru.mayoo.service;
 
-/**
- * Created with IntelliJ IDEA.
- * User: mayooran
- * Date: 8/29/13
- * Time: 10:10 PM
- * To change this template use File | Settings | File Templates.
- */
-public class StudentService {
+import com.guru.mayoo.model.Student;
+
+import java.util.List;
+
+public interface StudentService {
+
+    public void addStudent(Student student);
+    public List<Student> listStudent();
+    public void removeStudent(Integer id);
 }

@@ -1,4 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="fmt"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
 <head>
     <title></title>
@@ -27,16 +30,16 @@
 
         <div class="tab-content">
         <div class="tab-pane active" id="formControls">
-            <form id="edit-profile" class="form-horizontal">
+            <form:form id="edit-profile" class="form-horizontal" method="post" action="addStudentAction" commandName="student">
                 <fieldset>
 
                 <fieldset>
                 <legend>Personal Info</legend>
                     <div class="control-group">
-                        <label class="control-label" for="regNo">Registration No </label>
+                        <label class="control-label" for="studentId">Registration No </label>
 
                         <div class="controls">
-                            <input type="text" class="span4" id="regNo" value="">
+                            <form:input type="text" class="span4" id="studentId" value="" path="studentId"/>
                         </div>
                         <!-- /controls -->
                     </div>
@@ -46,7 +49,7 @@
                         <label class="control-label" for="firstName">First Name</label>
 
                         <div class="controls">
-                            <input type="text" class="span6" id="firstName" value="">
+                            <form:input type="text" class="span6" id="firstName" value="" path="firstName"/>
                         </div>
                         <!-- /controls -->
                     </div>
@@ -56,7 +59,7 @@
                         <label class="control-label" for="lastName">Last Name</label>
 
                         <div class="controls">
-                            <input type="text" class="span6" id="lastName" value="">
+                            <form:input type="text" class="span6" id="lastName" value="" path="lastName"/>
                         </div>
                         <!-- /controls -->
                     </div>
@@ -66,10 +69,10 @@
                         <label class="control-label">Gender</label>
                         <div class="controls">
                             <label class="radio inline">
-                                <input type="radio" name="radiobtns"> Male
+                                <form:radiobutton value="Male" path="gender"/> Male
                             </label>
                             <label class="radio inline">
-                                <input type="radio" name="radiobtns"> Female
+                                <form:radiobutton value="Female" path="gender"/> Female
                             </label>
                         </div>
                         <!-- /controls -->
@@ -80,17 +83,17 @@
                         <label class="control-label" for="dateOfBirth">Date of Birth</label>
 
                         <div class="controls">
-                            <input type="text" class="span6" id="dateOfBirth" value="">
+                            <form:input type="text" class="span6" id="dateOfBirth" value="" path="dateOfBirth"/>
                         </div>
                         <!-- /controls -->
                     </div>
                     <!-- /control-group -->
 
                     <div class="control-group">
-                        <label class="control-label" for="Grade">Grade</label>
+                        <label class="control-label" for="grade">Grade</label>
 
                         <div class="controls">
-                            <input type="text" class="span6" id="Grade" value="">
+                            <form:input type="text" class="span6" id="grade" value="" path="grade"/>
                         </div>
                         <!-- /controls -->
                     </div>
@@ -98,7 +101,7 @@
 
 
 
-
+<%--
                 </fieldset>
 
                 <fieldset>
@@ -272,6 +275,7 @@
                     <!-- /control-group -->
 
                 </fieldset>
+                --%>
                 <br/>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Save</button>
@@ -279,7 +283,7 @@
                     </div>
                     <!-- /form-actions -->
                 </fieldset>
-            </form>
+            </form:form>
         </div>
 
 <div class="tab-pane " id="jscontrols">
