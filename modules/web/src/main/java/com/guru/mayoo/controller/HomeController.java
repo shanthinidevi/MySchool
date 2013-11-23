@@ -1,6 +1,7 @@
 package com.guru.mayoo.controller;
 
 import com.guru.mayoo.model.Student;
+import com.guru.mayoo.model.User;
 import com.guru.mayoo.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,11 +33,10 @@ public class HomeController {
 
     @RequestMapping(value = "/signUp" , method = RequestMethod.GET)
     public String signUp(Model model){
+        model.addAttribute("user", new User());
 //        model.addAttribute("error", "true");
         return "sign-up";
     }
-
-
 
     @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
     public String loginError(ModelMap model) {

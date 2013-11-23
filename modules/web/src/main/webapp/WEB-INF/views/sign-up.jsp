@@ -1,5 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 </head>
@@ -10,7 +11,7 @@
 
         <div class="content clearfix">
 
-            <form action="#" method="post">
+            <form:form id="create-profile" method="post" action="addUserAction" commandName="user">
 
                 <h1>Signup for Free Account</h1>
 
@@ -20,23 +21,22 @@
 
                     <div class="field">
                         <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" value="" placeholder="First Name" class="login" />
+                        <form:input type="text" id="firstname" name="firstname" placeholder="First Name" class="login"  path="firstName"/>
                     </div> <!-- /field -->
 
                     <div class="field">
                         <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" value="" placeholder="Last Name" class="login" />
+                        <form:input type="text" id="lastname" name="lastname"  placeholder="Last Name" class="login"  path="lastName"/>
                     </div> <!-- /field -->
-
 
                     <div class="field">
                         <label for="email">Email Address:</label>
-                        <input type="text" id="email" name="email" value="" placeholder="Email" class="login"/>
+                        <form:input type="text" id="email" name="email" placeholder="Email" class="login" path="email"/>
                     </div> <!-- /field -->
 
                     <div class="field">
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" value="" placeholder="Password" class="login"/>
+                        <form:input type="password" id="password" name="password" placeholder="Password" class="login" path="password"/>
                     </div> <!-- /field -->
 
                     <div class="field">
@@ -53,11 +53,11 @@
 					<label class="choice" for="Field">Agree with the Terms & Conditions.</label>
 				</span>
 
-                    <button class="button btn btn-primary btn-large">Register</button>
+                    <form:button type="submit" class="button btn btn-primary btn-large">Register</form:button>
 
                 </div> <!-- .actions -->
 
-            </form>
+            </form:form>
 
         </div> <!-- /content -->
 
