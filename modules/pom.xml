@@ -11,7 +11,7 @@
     <name>modules Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>web</module>
+        <module>school-web</module>
         <module>reporting</module>
     </modules>
     <dependencies>

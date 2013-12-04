@@ -19,8 +19,7 @@ public class StudentDaoImpl implements StudentDao {
 
 	public List<Student> listStudent() {
 
-		return sessionFactory.getCurrentSession().createQuery("from Student")
-				.list();
+		return sessionFactory.getCurrentSession().createQuery("from Student").list();
 	}
 
 	public void removeStudent(Integer id) {
